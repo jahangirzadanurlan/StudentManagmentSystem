@@ -1,2 +1,28 @@
-package com.example.studentmanagmentsystem_thymeleaf.service.impl;public class StudentServiceImpl {
+package com.example.studentmanagmentsystem_thymeleaf.service.impl;
+
+
+import com.example.studentmanagmentsystem_thymeleaf.entity.Student;
+import com.example.studentmanagmentsystem_thymeleaf.repository.StudentRepository;
+import com.example.studentmanagmentsystem_thymeleaf.service.StudentService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class StudentServiceImpl implements StudentService {
+    private final StudentRepository studentRepository;
+
+    @Override
+    public List<Student> getAllStudent() {
+        return studentRepository.findAll();
+    }
+
+    @Override
+    public Student saveStudent(Student student) {
+        return studentRepository.save(student);
+    }
+
+
 }
