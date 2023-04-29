@@ -9,11 +9,12 @@ import lombok.experimental.FieldDefaults;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Long id;
     String name;
     String surname;
     String email;
