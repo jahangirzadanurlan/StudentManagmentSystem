@@ -3,11 +3,10 @@ package com.example.studentmanagmentsystem_thymeleaf.controller;
 import com.example.studentmanagmentsystem_thymeleaf.entity.Student;
 import com.example.studentmanagmentsystem_thymeleaf.service.StudentService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 public class StudentController {
     private final StudentService studentService;
